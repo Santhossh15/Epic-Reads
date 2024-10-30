@@ -6,6 +6,12 @@ const port = process.env.port || 5000
 require('dotenv').config()
 const bookRoutes = require('./src/books/book.route.js')
 
+app.use((req, res, next) => {
+    res.setHeader('Cross-Origin-Opener-Policy', 'same-origin-allow-popups'); // Set COOP header
+    next();
+});
+
+
 app.use(express.json());
 app.use(cors({
     origin: ['http://localhost:5173'],
