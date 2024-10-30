@@ -4,17 +4,16 @@ import { FaGoogle } from "react-icons/fa";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 
-const [message, setMessage] = useState("");
-const {
-  register,
-  handleSubmit,
-  watch,
-  formState: { errors },
-} = useForm();
-const onSubmit = (data) => console.log(data);
-const handleGoogleSignIn = () => {};
-
 const Register = () => {
+  const [message, setMessage] = useState("");
+  const {
+    register,
+    handleSubmit,
+    watch,
+    formState: { errors },
+  } = useForm();
+  const onSubmit = (data) => console.log(data);
+  const handleGoogleSignIn = () => {};
   return (
     <div className=" h-[calc(100vh-120px)] flex justify-center items-center">
       <div className="w-full max-w-sm mx-auto bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
