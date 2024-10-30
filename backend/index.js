@@ -6,9 +6,10 @@ const port = process.env.port || 5000
 require('dotenv').config()
 const bookRoutes = require('./src/books/book.route.js')
 const orderRoutes = require("./src/orders/order.route.js")
+const adminRoutes = require("./src/stats/admin.stats.js")
 
 app.use((req, res, next) => {
-    res.setHeader('Cross-Origin-Opener-Policy', 'same-origin-allow-popups'); // Set COOP header
+    res.setHeader('Cross-Origin-Opener-Policy', 'same-origin-allow-popups');
     next();
 });
 
@@ -21,6 +22,8 @@ app.use(cors({
 
 app.use("/api/books", bookRoutes)
 app.use("/api/orders", orderRoutes)
+app.use("/api/admin", adminRoutes)
+
 
 async function main() {
     await mongoose.connect(process.env.DB_URL);
