@@ -10,6 +10,11 @@ import SingleBook from "../pages/books/SingleBook";
 import OrderPage from "../pages/books/OrderPage";
 import AdminRoute from "./AdminRoute";
 import AdminLogin from "../components/AdminLogin";
+import DashboardLayout from "../pages/dashboard/DashboardLayout";
+import Dashboard from "../pages/dashboard/Dashboard";
+import UpdateBook from "../pages/dashboard/EditBook/UpdateBook";
+import ManageBooks from "../pages/dashboard/manageBooks/ManageBooks";
+import AddBook from "../pages/dashboard/addBook/AddBook";
 const router = createBrowserRouter([
   {
     path: "/",
